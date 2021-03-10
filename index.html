@@ -21,7 +21,7 @@
             <nav class="nav">
                 <a href="./index.html" class="logo"><span class="logo-web">Web</span>Studio</a>
                 <ul class="nav-list">
-                    <li><a class="nav-list-link current" href="./index.html">Студия</a></li>
+                    <li class="nav-item-current"><a class="nav-list-link current" href="./index.html">Студия</a></li>
                     <li><a class="nav-list-link" href="./portfolio.html">Портфолио</a></li>
                     <li><a class="nav-list-link" href="">Контакты</a></li>
                 </ul>
@@ -45,7 +45,17 @@
     <main>
         <section class="slogan">
             <h1 class="slogan-title">Эфективные решение для вашего бизнеса</h1>
-            <a class="slogan-link btn" href="">Заказать услугу</a>
+            <a class="slogan-link btn" href="">Заказать услугу
+                <div class="backdrop">
+                    <div class="modal">
+                        <button>
+                            <svg class="icon-close" width="30" height="30">
+                                <use href="../images/.Vector.svg"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </a>
         </section>
 
 
@@ -106,17 +116,26 @@
                 <ul class="galery-list">
                     <li class="galery-list-item">
                         <a href="">
-                            <img src="./images/service1.jpg" alt="Услуга1" />
+                            <img class="galery-item-image" src="./images/service1.jpg" alt="Услуга1" />
+                            <div class="overlay">
+                                <h3 class="galery-item-title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
+                            </div>
                         </a>
                     </li>
                     <li class="galery-list-item">
                         <a href="">
-                            <img src="./images/service2.jpg" alt="Услуга2" />
+                            <img class="galery-item-image" src="./images/service2.jpg" alt="Услуга2" />
+                            <div class="overlay">
+                                <h3 class="galery-item-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
+                            </div>
                         </a>
                     </li>
                     <li class="galery-list-item">
                         <a href="">
-                            <img src="./images/service3.jpg" alt="Услуга3" />
+                            <img class="galery-item-image" src="./images/service3.jpg" alt="Услуга3" />
+                            <div class="overlay">
+                                <h3 class="galery-item-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
+                            </div>
                         </a>
                     </li>
                 </ul>
