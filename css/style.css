@@ -248,8 +248,10 @@ header .container {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.icon-close {
-  
+.icon-vector {
+  width: 11px;
+  height: 11px;
+  fill: red;
 }
 
 .features-list {
