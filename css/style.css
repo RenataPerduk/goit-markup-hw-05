@@ -18,6 +18,7 @@ html {
   --additional-background-color: #f5f4fa;
   --main-background-color: #fff;
   --border-color: rgba(236, 236, 236, 1);
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ul {
@@ -107,9 +108,7 @@ header .container {
 .nav-list-link {
   position: relative;
   display: inline-block;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
@@ -132,6 +131,7 @@ header .container {
 
 .nav-list-link:hover {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-link:focus {
@@ -151,6 +151,7 @@ header .container {
   line-height: 1.14;
   color: var(--primary-text-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-link.current::after {
@@ -173,6 +174,7 @@ header .container {
 
 .contacts-list-link:hover {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list-link:focus {
@@ -264,6 +266,8 @@ header .container {
   background-color: #FFFFFF;
   text-align: center;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
@@ -272,6 +276,12 @@ header .container {
 
 .modal-close-btn .icon-contacts {
   margin-right: 0;
+}
+
+.modal-close-btn:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -431,6 +441,8 @@ ul.team-list {
   width: 44px;
   height: 44px;
   border-radius: 44px;
+  transition: fill 250ms var(--cubic), 
+    background-color 250ms var(--cubic);
 }
 
 .icon-team:hover {
@@ -468,15 +480,13 @@ ul.team-list {
   object-fit: cover;
 }
 
-.team-list > .team-list-item:hover {
+.team-list > .team-list-item {
   box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
     1px 4px 6px rgb(0 0 0 / 16%);
 }
 
 .text-thumb {
   padding: 30px 0;
-  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
-    1px 4px 6px rgb(0 0 0 / 16%);
   background: rgba(255, 255, 255, 1);
 }
 
@@ -538,7 +548,6 @@ ul.team-list {
   background-color: #ffffff;
   color: var(--accent-color);
   border-color: var(--accent-color);
-  transition: all 0.5s ease-out;
 }
 
 .client-list-item {
@@ -570,6 +579,9 @@ ul.client-list {
   box-sizing: border-box;
   border-radius: 4px;
   outline: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address-map {
@@ -580,10 +592,12 @@ ul.client-list {
   font-size: 14px;
   line-height: 1.71;
   color: #ffffff;
+  transition: color 250ms var(--cubic);
 }
 
 .footer-address-map:hover {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 
 .footer-email,
@@ -594,6 +608,7 @@ ul.client-list {
   font-size: 14px;
   line-height: 1.71;
   color: var(--mailtel-logo-color);
+  transition: color 250ms var(--cubic);
 }
 
 .footer-email {
@@ -602,10 +617,12 @@ ul.client-list {
 
 .footer-email:hover {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 
 .footer-tel:hover {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 
 .footer-logo {
@@ -641,10 +658,12 @@ ul.client-list {
   border-radius: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--main-background-color);
+  transition: background-color 250 ms var(--cubic);
 }
 
 .thumb-link:hover {
   background-color: var(--accent-color);
+  transition: background-color 250 ms var(--cubic);
 }
 
 .icon-list-item:not(:last-child) {
@@ -660,10 +679,6 @@ ul.client-list {
   justify-content: flex-start;
   align-items: inherit;
 }
-
-/* .footer-info>div {
-    width: calc(100% - 70px / 2);
-  } */
 
 .portfolio {
   padding-top: 94px;
@@ -694,11 +709,15 @@ ul.client-list {
   min-width: 145px;
   color: var(--title-text-color);
   background-color: var(--additional-background-color);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 .portfolio-button:hover {
   color: #fff;
   background-color: var(--accent-color);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
+    1px 4px 6px rgb(0 0 0 / 16%);
 }
 
 .portfolio-button:focus {
